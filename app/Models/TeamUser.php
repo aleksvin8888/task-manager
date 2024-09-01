@@ -9,4 +9,11 @@ use Illuminate\Database\Eloquent\Model;
 class TeamUser extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'team_id',
+        'user_id',
+        'created_at',
+        'updated_at'
+    ];
 }
