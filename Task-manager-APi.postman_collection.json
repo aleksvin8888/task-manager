@@ -1,0 +1,735 @@
+{
+	"info": {
+		"_postman_id": "d34c22d1-36a1-4b29-a349-100e4409296f",
+		"name": "Task-manager-APi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24523900",
+		"_collection_link": "https://restless-comet-678275.postman.co/workspace/d7fdeaca-bd36-4ad2-a33f-fe6936caecc1/collection/24523900-d34c22d1-36a1-4b29-a349-100e4409296f?action=share&source=collection_link&creator=24523900"
+	},
+	"item": [
+		{
+			"name": "/tasks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|yWsc7znF5pLSLeeNXjZm8WAYogJDWFIl6BxzqLzk3ac54696",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://task-manager.go.vn.ua/api/tasks?status=in-progress",
+					"protocol": "http",
+					"host": [
+						"task-manager",
+						"go",
+						"vn",
+						"ua"
+					],
+					"path": [
+						"api",
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "in-progress",
+							"description": "new  pending in-progress completed"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3|cRi9pFbu28xrvqemDZ5hsxpuU89gaUMV7zIjtm7Q4036c1de",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://task-manager.go.vn.ua/api/logout?postman terminal",
+					"protocol": "http",
+					"host": [
+						"task-manager",
+						"go",
+						"vn",
+						"ua"
+					],
+					"path": [
+						"api",
+						"logout"
+					],
+					"query": [
+						{
+							"key": "postman terminal",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "alex@go.vn.ua",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "dracaris",
+							"type": "text"
+						},
+						{
+							"key": "device_name",
+							"value": "postman terminal",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "harvey59@example.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://task-manager.go.vn.ua/api/login",
+					"protocol": "http",
+					"host": [
+						"task-manager",
+						"go",
+						"vn",
+						"ua"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rgister",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Alex ",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "admin123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://task-manager.go.vn.ua/api/register",
+					"protocol": "http",
+					"host": [
+						"task-manager",
+						"go",
+						"vn",
+						"ua"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/tasks  details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|lybgplJIxOpIJwvBphxCFeLzR12r9LGKrXy06Cgfd3cfce9f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://task-manager.go.vn.ua/api/tasks/2",
+					"protocol": "http",
+					"host": [
+						"task-manager",
+						"go",
+						"vn",
+						"ua"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/tasks  create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|lybgplJIxOpIJwvBphxCFeLzR12r9LGKrXy06Cgfd3cfce9f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "title  max 255 ",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "long text  description",
+							"type": "text"
+						},
+						{
+							"key": "team_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://task-manager.go.vn.ua/api/tasks",
+					"protocol": "http",
+					"host": [
+						"task-manager",
+						"go",
+						"vn",
+						"ua"
+					],
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/tasks  update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|lybgplJIxOpIJwvBphxCFeLzR12r9LGKrXy06Cgfd3cfce9f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "title  max 255 ",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "long text  description",
+							"type": "text"
+						},
+						{
+							"key": "team_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "new",
+							"description": "new  pending  in-progress   completed",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://task-manager.go.vn.ua/api/tasks/52",
+					"protocol": "http",
+					"host": [
+						"task-manager",
+						"go",
+						"vn",
+						"ua"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"52"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/tasks  delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|lybgplJIxOpIJwvBphxCFeLzR12r9LGKrXy06Cgfd3cfce9f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://task-manager.go.vn.ua/api/tasks/50",
+					"protocol": "http",
+					"host": [
+						"task-manager",
+						"go",
+						"vn",
+						"ua"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"50"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/tasks/1/comments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|lybgplJIxOpIJwvBphxCFeLzR12r9LGKrXy06Cgfd3cfce9f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://task-manager.go.vn.ua/api/tasks/1/comments",
+					"protocol": "http",
+					"host": [
+						"task-manager",
+						"go",
+						"vn",
+						"ua"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"1",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tasks   add  comments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|lybgplJIxOpIJwvBphxCFeLzR12r9LGKrXy06Cgfd3cfce9f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "content",
+							"value": "Some comments on the task in text format ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://task-manager.go.vn.ua/api/tasks/1/comments",
+					"protocol": "http",
+					"host": [
+						"task-manager",
+						"go",
+						"vn",
+						"ua"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"1",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/comments  ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|lybgplJIxOpIJwvBphxCFeLzR12r9LGKrXy06Cgfd3cfce9f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://task-manager.go.vn.ua/api/comments/98",
+					"protocol": "http",
+					"host": [
+						"task-manager",
+						"go",
+						"vn",
+						"ua"
+					],
+					"path": [
+						"api",
+						"comments",
+						"98"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/teams",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|yWsc7znF5pLSLeeNXjZm8WAYogJDWFIl6BxzqLzk3ac54696",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://task-manager.go.vn.ua/api/teams",
+					"protocol": "http",
+					"host": [
+						"task-manager",
+						"go",
+						"vn",
+						"ua"
+					],
+					"path": [
+						"api",
+						"teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/teams  create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|I5gagc5xyZGMYxjWWZ2ln7tBnt9mEB6rsk3N6zBte57c03ba",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Бешені пси",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://task-manager.go.vn.ua/api/teams",
+					"protocol": "http",
+					"host": [
+						"task-manager",
+						"go",
+						"vn",
+						"ua"
+					],
+					"path": [
+						"api",
+						"teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/teams   add  user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|I5gagc5xyZGMYxjWWZ2ln7tBnt9mEB6rsk3N6zBte57c03ba",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://task-manager.go.vn.ua/api/teams/8/users/1",
+					"protocol": "http",
+					"host": [
+						"task-manager",
+						"go",
+						"vn",
+						"ua"
+					],
+					"path": [
+						"api",
+						"teams",
+						"8",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/teams  delete user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|I5gagc5xyZGMYxjWWZ2ln7tBnt9mEB6rsk3N6zBte57c03ba",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://task-manager.go.vn.ua/api/teams/8/users/1",
+					"protocol": "http",
+					"host": [
+						"task-manager",
+						"go",
+						"vn",
+						"ua"
+					],
+					"path": [
+						"api",
+						"teams",
+						"8",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
