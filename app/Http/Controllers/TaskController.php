@@ -10,6 +10,7 @@ use App\Http\Resources\TaskResource;
 use App\Models\Task;
 use App\Services\TaskService;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -23,9 +24,17 @@ class TaskController extends Controller
         $this->taskService = $taskService;
     }
 
-    public function index(): array
+    public function index(Request $request): array
     {
-        $tasks = Auth::user()->tasks;
+        $status = $request->query('status');
+
+        $query = Auth::user()->tasks();
+
+        if ($status) {
+            $query->where('status', $status);
+        }
+
+        $tasks = $query->get();
 
         return TaskResource::collection($tasks)->resolve();
     }

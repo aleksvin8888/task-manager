@@ -18,7 +18,7 @@ class TaskSeeder extends Seeder
         $users = User::all();
 
         foreach ($users as $user) {
-            for ($i = 0; $i < 3; $i++) {
+            for ($i = 0; $i < 30; $i++) {
 
                 $task = $user->tasks()->create([
                     'title' => fake()->realText(15),
