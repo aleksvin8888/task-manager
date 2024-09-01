@@ -10,6 +10,6 @@ enum Statuses: string
     use ToArrayConverterTrait;
     case New = 'new';
     case Pending = 'pending';
-    case  InProgress = ' in-progress';
+    case  InProgress = 'in-progress';
     case Completed = 'completed';
 }
